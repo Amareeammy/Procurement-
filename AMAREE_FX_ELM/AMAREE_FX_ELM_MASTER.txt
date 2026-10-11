@@ -1,0 +1,1338 @@
+================================================================================
+AMAREE FX ACADEMY
+ECCENTRIC LIQUIDATION MODEL (ELM)
+Multi-Timeframe AI Analysis & Execution Framework
+
+Core Principle: PRECISION IN EXECUTION. PATIENCE IN PRICE ACTION.
+
+Version: 1.0.0
+Classification: PROPRIETARY STRATEGY FRAMEWORK
+================================================================================
+
+DOCUMENT INDEX
+===============
+
+PART A: FOUNDATIONAL DEFINITIONS
+  A1.  Eccentric Liquidation: Operational Definition
+  A2.  Relationship to Established SMC/ICT Concepts
+  A3.  Market Phenomena Classification
+  A4.  Hypothesis Separation Protocol
+
+PART B: MULTI-TIMEFRAME WORKFLOW
+  B1.  Instrument & Timeframe Discovery
+  B2.  Top-Down Analysis Protocol
+  B3.  Context Retention System
+  B4.  Timeframe Combination Matrix
+
+PART C: ENTRY CONDITIONS & VALIDATION
+  C1.  Bullish Eccentric Liquidation Setup
+  C2.  Bearish Eccentric Liquidation Setup
+  C3.  Confirmation Hierarchy
+  C4.  False Signal Filters
+  C5.  Continuation vs. Reversal Discrimination
+
+PART D: INSTRUMENT ADAPTABILITY
+  D1.  Volatility-Scaled Parameters
+  D2.  Quote Precision & Spread Adaptation
+  D3.  Transaction Cost Integration
+  D4.  Cross-Pair Consistency Rules
+
+PART E: STANDARDIZED EXECUTION FRAMEWORK
+  E1.  Trade Card Structure
+  E2.  Risk Management Protocol
+  E3.  Structural Invalidation Rules
+  E4.  Next Action Logic
+
+PART F: SCREENSHOT INTERPRETATION
+  F1.  Visual Pattern Recognition
+  F2.  Swing Identification Protocol
+  F3.  Liquidity Mapping Rules
+  F4.  Candle State Handling
+  F5.  Evidence vs. Interpretation Separation
+
+PART G: COMPLETE ANALYSIS WORKFLOW
+  G1.  Multi-Screenshot Processing
+  G2.  Context Propagation System
+  G3.  Conflict Resolution Protocol
+  G4.  ANALYZE NOW Command Execution
+
+PART H: DECISION RULES
+  H1.  Verdict Matrix
+  H2.  Confirmation Thresholds
+  H3.  Mandatory Evidence Checklist
+
+PART I: DEMONSTRATION & VALIDATION
+  I1.  Bullish Example: EURUSD H4
+  I2.  Bearish Example: GBPJPY D1
+  I3.  False Signal Example: AUDUSD M15
+  I4.  Backtesting Methodology
+  I5.  Performance Metrics Framework
+
+PART J: MASTER PROMPT
+  J1.  AI Deployment Template
+  J2.  Quick-Use Commands
+  J3.  Technical Reference
+
+================================================================================
+PART A: FOUNDATIONAL DEFINITIONS
+================================================================================
+
+A1. ECCENTRIC LIQUIDATION: OPERATIONAL DEFINITION
+--------------------------------------------------
+
+Eccentric Liquidation (EL) is a PRICE-ACTION EVENT characterized by:
+
+1. UNUSUAL PRICE EXCURSION: A rapid, non-linear movement that exceeds the
+   instrument's typical volatility envelope by >= 1.6x the 20-period ATR
+   measured from the highest timeframe in analysis.
+
+2. LIQUIDITY RAID EVIDENCE: The excursion sweeps a clearly defined liquidity
+   pool (stop cluster) identified by:
+   - Previous swing high/low with visible wicks
+   - Order block from prior displacement
+   - Fair Value Gap (FVG) from imbalance
+   - Volume spike (when available)
+
+3. REJECTION OR RECLAIM: Price returns >= 61.8% of the excursion distance
+   within 3 candles (timeframe-dependent) OR reclaims the pre-excursion
+   structure level with momentum.
+
+4. DISPLACEMENT CONFIRMATION: The rejection creates a new market structure
+   shift (higher high/low or lower high/low) within 5 candles of the
+   eccentric event.
+
+5. MSS/BOS ALIGNMENT: The event occurs at or beyond a Market Structure
+   Shift (MSS) or Break of Structure (BOS) level from the next higher
+   timeframe.
+
+OPERATIONAL FORMULA:
+EL = (Excursion > 1.6x ATR20) AND (Liquidity Sweep) AND (Rejection >= 61.8%)
+     AND (Structure Shift) AND (MSS/BOS Alignment)
+
+EXCLUSIONS (Not EL):
+- News-driven gaps without liquidity context
+- Regular retracements within established trends
+- Range expansions without structural follow-through
+- Low-volume spikes in illiquid pairs
+- Pre-planned economic event reactions
+
+
+A2. RELATIONSHIP TO ESTABLISHED SMC/ICT CONCEPTS
+--------------------------------------------------
+
+ESTABLISHED CONCEPTS (SMC/ICT):
+- Liquidity: Areas where stop orders cluster (above highs, below lows)
+- Market Structure: Series of higher highs/lows (bullish) or lower highs/lows (bearish)
+- Break of Structure (BOS): Price moves beyond previous swing extreme
+- Change of Character (CHOCH): Price behavior shifts from trend to range or vice versa
+- Fair Value Gap (FVG): Three-candle imbalance creating unfilled liquidity
+- Order Block: Institutional order clusters from prior displacement
+- Mitigation Block: Counter-trend orders from FVG fills
+- Discount/Premium: Price relative to fair value
+- Kill Zone: High-probability reversal areas (London Open, New York Open)
+
+NEW HYPOTHESES (ELM-SPECIFIC):
+- Eccentric Liquidation: The specific pattern defined above
+- 1.6x ATR Threshold: Quantified excursion boundary
+- 61.8% Rejection Rule: Fibonacci-based validation
+- Multi-Timeframe MSS Alignment: Cross-timeframe confirmation requirement
+- Volatility-Scaled Parameters: Dynamic adaptation system
+
+SEPARATION PROTOCOL:
+When analyzing any price action:
+1. First classify using ESTABLISHED SMC/ICT concepts
+2. Then check if NEW ELM hypotheses apply
+3. Never force ELM interpretation on standard patterns
+4. Document which framework each observation belongs to
+
+
+A3. MARKET PHENOMENA CLASSIFICATION
+------------------------------------
+
+PHENOMENON          | SMC/ICT TERM    | ELM CLASSIFICATION | TRADABLE?
+-------------------|-----------------|---------------------|----------
+Sharp reversal      | Liquidity Raid  | Potential EL        | Yes (with confirmation)
+Stop hunt          | Liquidity Sweep | EL Component        | Yes
+Breakout           | BOS             | Not EL (continuation)| Yes (different rules)
+False breakout     | FVG Fill        | EL Candidate        | Yes
+Range expansion   | -               | Not EL              | No
+News spike         | -               | Excluded            | No
+Trend continuation | -               | Not EL              | Yes (different rules)
+
+
+A4. HYPOTHESIS SEPARATION PROTOCOL
+-----------------------------------
+
+RULE 1: Every observation must be classifiable under SMC/ICT BEFORE applying
+        ELM hypotheses.
+
+RULE 2: ELM hypotheses only apply when ALL FIVE criteria from A1 are met.
+
+RULE 3: If a pattern fits SMC/ICT but not ELM, trade using SMC/ICT rules.
+
+RULE 4: If a pattern fits both, prioritize ELM only if it offers superior
+        reward-to-risk based on backtested performance.
+
+RULE 5: Document the classification path for every analysis.
+
+================================================================================
+PART B: MULTI-TIMEFRAME WORKFLOW
+================================================================================
+
+B1. INSTRUMENT & TIMEFRAME DISCOVERY
+-------------------------------------
+
+AUTOMATIC IDENTIFICATION PROTOCOL:
+
+From uploaded screenshot, extract:
+1. Instrument: From chart title or symbol display
+   - Forex: XXXYYY format (EURUSD, GBPJPY, etc.)
+   - Metals: XAUUSD, XAGUSD
+   - Synthetics: Volatility75, Volatility100, etc.
+
+2. Timeframe: From chart period label
+   - Standard: M1, M5, M15, M30, H1, H4, D1, W1, MN
+   - Custom: Any non-standard (flag for manual review)
+
+3. Chart State: Current candle status
+   - OPEN: Current candle still forming
+   - CLOSED: All candles complete
+
+DISCOVERY COMMANDS:
+- "IDENTIFY INSTRUMENT": Extract symbol from screenshot
+- "IDENTIFY TIMEFRAME": Extract period from screenshot
+- "LIST ALL": Show all identified instruments and timeframes
+
+
+B2. TOP-DOWN ANALYSIS PROTOCOL
+-------------------------------
+
+STEP 1: Highest Timeframe (HTF) Analysis
+  a. Identify market structure (trend/range)
+  b. Map major liquidity levels (above highs, below lows)
+  c. Note MSS/BOS points from prior swings
+  d. Establish volatility baseline (ATR20)
+  e. Define fair value zone (middle 50% of recent range)
+
+STEP 2: Intermediate Timeframe (ITF) Analysis
+  a. Confirm HTF structure alignment
+  b. Identify internal liquidity pools
+  c. Look for FVGs and order blocks
+  d. Check for eccentric events meeting HTF criteria
+  e. Validate rejection quality
+
+STEP 3: Execution Timeframe (ETF) Analysis
+  a. Pinpoint exact entry triggers
+  b. Define stop-loss placement
+  c. Calculate TP levels
+  d. Verify all EL criteria
+  e. Check for conflicting signals
+
+TIMEFRAME PRIORITY:
+- If D1 present: D1 -> H4 -> H1
+- If H4 present but not D1: H4 -> H1 -> M15
+- If H1 present but not H4/D1: H1 -> M15 -> M5
+- If M15 present but not higher: M15 -> M5 -> M1
+
+CONTEXT RETAINED:
+- HTF liquidity levels
+- HTF structure direction
+- HTF volatility envelope
+- HTF MSS/BOS status
+
+
+B3. CONTEXT RETENTION SYSTEM
+-----------------------------
+
+MEMORY HIERARCHY:
+1. Instrument Profile (persists across all timeframes)
+   - Average daily range
+   - Typical spread
+   - Quote precision
+   - Volatility classification (Low/Medium/High)
+
+2. Session Context (resets daily)
+   - London Open level
+   - New York Open level
+   - Asian session range
+   - Kill zone status
+
+3. Timeframe Context (cascades downward)
+   - Structure direction
+   - Liquidity levels
+   - ATR values
+   - FVG locations
+
+CONTEXT PROPAGATION:
+When moving from HTF to ITF to ETF:
+- HTF liquidity levels become ITF "external liquidity"
+- HTF structure becomes ITF "macro bias"
+- HTF volatility becomes ITF "scaling factor"
+- ITF observations become ETF "confirmation requirements"
+
+
+B4. TIMEFRAME COMBINATION MATRIX
+----------------------------------
+
+APPROVED COMBINATIONS:
+
+D1 -> H4 -> H1:
+  - Use for: Major pairs, high volatility
+  - Minimum candles: D1=30, H4=100, H1=400
+  - Best for: Swing trading (1-3 days)
+
+H4 -> H1 -> M15:
+  - Use for: All pairs, medium volatility
+  - Minimum candles: H4=50, H1=200, M15=400
+  - Best for: Day trading (hours to 1 day)
+
+H4 -> H1 -> M15 -> M5:
+  - Use for: Scalping, precise entries
+  - Minimum candles: H4=50, H1=200, M15=400, M5=800
+  - Best for: Intraday (minutes to hours)
+
+M15 -> M5 -> M1:
+  - Use for: Fast-moving pairs, news events
+  - Minimum candles: M15=100, M5=400, M1=2000
+  - Best for: Micro-scalping (< 1 hour)
+
+CUSTOM COMBINATIONS:
+- Must maintain >= 4x ratio between timeframes
+- Must have >= 100 candles on execution timeframe
+- Must pass context validation check
+
+================================================================================
+PART C: ENTRY CONDITIONS & VALIDATION
+================================================================================
+
+C1. BULLISH ECCENTRIC LIQUIDATION SETUP
+---------------------------------------
+
+REQUIREMENTS (ALL MUST BE MET):
+
+1. EXCURSION BELOW STRUCTURE:
+   - Price sweeps below a clearly defined liquidity pool
+   - Sweep distance >= 1.6x HTF ATR20
+   - Liquidity pool = previous swing low OR order block low
+
+2. REJECTION EVIDENCE:
+   - Price returns >= 61.8% of sweep distance within 3 candles
+   - Rejection candle has body >= 60% of total range
+   - Rejection occurs with increasing volume (when available)
+
+3. DISPLACEMENT CONFIRMATION:
+   - Price creates new higher low above the swept liquidity
+   - OR price reclaims the pre-sweep structure level
+   - Must occur within 5 candles of rejection
+
+4. MSS/BOS ALIGNMENT:
+   - The swept low must be at or below a HTF MSS level
+   - OR the rejection must create a BOS above HTF structure
+
+5. STRUCTURAL VALIDATION:
+   - HTF structure must be bullish (higher highs/lows)
+   - OR neutral with bullish bias from ITF
+
+ENTRY TRIGGER:
+- Price breaks above the high of the rejection candle
+- OR price retests the swept liquidity as support with bullish order flow
+
+
+C2. BEARISH ECCENTRIC LIQUIDATION SETUP
+----------------------------------------
+
+REQUIREMENTS (ALL MUST BE MET):
+
+1. EXCURSION ABOVE STRUCTURE:
+   - Price sweeps above a clearly defined liquidity pool
+   - Sweep distance >= 1.6x HTF ATR20
+   - Liquidity pool = previous swing high OR order block high
+
+2. REJECTION EVIDENCE:
+   - Price returns >= 61.8% of sweep distance within 3 candles
+   - Rejection candle has body >= 60% of total range
+   - Rejection occurs with increasing volume (when available)
+
+3. DISPLACEMENT CONFIRMATION:
+   - Price creates new lower high below the swept liquidity
+   - OR price reclaims the pre-sweep structure level
+   - Must occur within 5 candles of rejection
+
+4. MSS/BOS ALIGNMENT:
+   - The swept high must be at or above a HTF MSS level
+   - OR the rejection must create a BOS below HTF structure
+
+5. STRUCTURAL VALIDATION:
+   - HTF structure must be bearish (lower highs/lows)
+   - OR neutral with bearish bias from ITF
+
+ENTRY TRIGGER:
+- Price breaks below the low of the rejection candle
+- OR price retests the swept liquidity as resistance with bearish order flow
+
+
+C3. CONFIRMATION HIERARCHY
+---------------------------
+
+LEVEL 1 (MANDATORY - All Required):
+- Excursion >= 1.6x ATR20
+- Liquidity sweep identified
+- Rejection >= 61.8%
+
+LEVEL 2 (STRONG CONFIRMATION - 2 of 3 Required):
+- Displacement within 5 candles
+- MSS/BOS alignment
+- Volume increase on rejection
+
+LEVEL 3 (OPTIMAL CONFIRMATION - 1 of 2 Required):
+- FVG present in direction of trade
+- Order block in direction of trade
+
+CONFIRMATION SCORE:
+- Level 1 only: 33% - WAIT FOR MORE CONFIRMATION
+- Level 1 + Level 2 (2/3): 66% - TRADE WITH CAUTION
+- Level 1 + Level 2 (3/3) + Level 3: 100% - HIGH CONFIDENCE
+
+
+C4. FALSE SIGNAL FILTERS
+------------------------
+
+FILTER 1: Low Volume Filter
+- If volume on rejection candle < average of previous 5 candles
+- AND no FVG/order block alignment
+- => INVALIDATE
+
+FILTER 2: Time Filter
+- If eccentric event occurs within 1 hour of known high-impact news
+- => INVALIDATE (wait for news to pass)
+
+FILTER 3: Range Filter
+- If current HTF range < 50% of 20-day average range
+- => INVALIDATE (low volatility environment)
+
+FILTER 4: Structure Filter
+- If HTF structure contradicts ITF/ETF signal
+- => INVALIDATE (conflicting context)
+
+FILTER 5: Overbought/Oversold Filter
+- If price is > 2 standard deviations from 20-period mean (Bollinger)
+- AND no displacement confirmation
+- => WAIT FOR CONFIRMATION
+
+FILTER 6: Candle State Filter
+- If current candle on ETF is still forming (open)
+- AND entry trigger not yet met
+- => WAIT FOR CANDLE CLOSE
+
+
+C5. CONTINUATION VS. REVERSAL DISCRIMINATION
+---------------------------------------------
+
+REVERSAL SIGNALS (EL Candidate):
+- Sweep of opposite structure extreme
+- Rejection >= 61.8%
+- Displacement creates NEW structure in opposite direction
+- MSS alignment from higher timeframe
+
+CONTINUATION SIGNALS (Not EL):
+- Sweep of same-direction structure extreme
+- Rejection < 50%
+- Displacement continues in SAME direction
+- BOS alignment (not MSS)
+
+DISCRIMINATION RULES:
+1. If displacement creates higher high in uptrend => CONTINUATION
+2. If displacement creates lower high in uptrend => POTENTIAL REVERSAL
+3. If displacement creates lower low in downtrend => CONTINUATION
+4. If displacement creates higher low in downtrend => POTENTIAL REVERSAL
+
+================================================================================
+PART D: INSTRUMENT ADAPTABILITY
+================================================================================
+
+D1. VOLATILITY-SCALED PARAMETERS
+--------------------------------
+
+VOLATILITY CLASSIFICATION:
+- LOW: Average daily range < 50 pips (e.g., EURGBP, AUDNZD)
+- MEDIUM: Average daily range 50-150 pips (e.g., EURUSD, GBPUSD)
+- HIGH: Average daily range > 150 pips (e.g., GBPJPY, exotic pairs)
+
+SCALING FACTORS:
+- LOW: ATR multiplier = 1.8x, Rejection = 70%
+- MEDIUM: ATR multiplier = 1.6x, Rejection = 61.8%
+- HIGH: ATR multiplier = 1.4x, Rejection = 50%
+
+XAUUSD SPECIAL:
+- ATR multiplier = 2.0x (due to high volatility)
+- Rejection = 61.8%
+- Additional filter: Check correlation with USD index
+
+SYNTHETIC INDICES (Vol75, Vol100):
+- ATR multiplier = 1.2x (extremely volatile)
+- Rejection = 50%
+- Timeframe: Maximum H1 (no higher)
+- Special: Ignore traditional SMC structure, focus on momentum
+
+
+D2. QUOTE PRECISION & SPREAD ADAPTATION
+----------------------------------------
+
+PRECISION HANDLING:
+- JPY pairs: 3 decimal places (0.001 = 1 pip)
+- Standard pairs: 5 decimal places (0.00001 = 0.1 pip)
+- XAUUSD: 3 decimal places (0.001 = 10 cents)
+- Synthetics: 2 decimal places
+
+SPREAD ADJUSTMENT:
+- Entry buffer = spread + 1 pip (minimum)
+- Stop-loss buffer = spread + 2 pips
+- TP buffer = spread (no additional buffer)
+
+TRANSACTION COST INTEGRATION:
+- Total cost = spread + commission + slippage
+- Minimum R:R adjustment = cost / stop distance
+- If adjusted R:R < 1.5 => INVALIDATE
+
+
+D3. TRANSACTION COST INTEGRATION
+---------------------------------
+
+COST CALCULATION:
+- Spread: Current bid/ask difference
+- Commission: Per lot cost (if known)
+- Slippage: Estimated based on volatility (0.5-2 pips typical)
+
+R:R ADJUSTMENT:
+Original R:R = (TP - Entry) / (Entry - SL)
+Adjusted R:R = (TP - Entry - Total Cost) / (Entry - SL + Total Cost)
+
+MINIMUM ACCEPTABLE:
+- Adjusted R:R >= 1.5 for all trades
+- Adjusted R:R >= 2.0 for counter-trend trades
+
+
+D4. CROSS-PAIR CONSISTENCY RULES
+----------------------------------
+
+CORRELATION CHECK:
+- If trading EURUSD, check GBPUSD, USDJPY for consistency
+- If trading XAUUSD, check USD index
+- If 2 of 3 correlated pairs show opposite signal => WAIT
+
+VOLATILITY NORMALIZATION:
+- Compare current ATR to 30-day average
+- If current ATR > 2x average => Use higher volatility parameters
+- If current ATR < 0.5x average => Use lower volatility parameters
+
+INSTRUMENT-SPECIFIC RULES:
+- JPY pairs: Watch for BOJ intervention zones
+- Exotics: Wider stops, lower position sizes
+- Majors: Standard parameters
+- Crosses: Check both currency components
+
+================================================================================
+PART E: STANDARDIZED EXECUTION FRAMEWORK
+================================================================================
+
+E1. TRADE CARD STRUCTURE
+------------------------
+
+TRADE CARD TEMPLATE:
+```
+================================================================================
+AMAREE FX ELM - TRADE CARD
+================================================================================
+
+INSTRUMENT: [SYMBOL]
+TIMEFRAMES: [HTF] -> [ITF] -> [ETF]
+ANALYSIS TIME: [TIMESTAMP]
+ANALYST: [AI/USER]
+
+--------------------------------------------------------------------------------
+BIAS: [BULLISH/BEARISH/NEUTRAL]
+--------------------------------------------------------------------------------
+
+ENTRY CONDITIONS:
+  [ ] Excursion >= 1.6x ATR20 (Distance: [VALUE])
+  [ ] Liquidity Sweep Identified (Level: [PRICE])
+  [ ] Rejection >= 61.8% (Return: [VALUE]%)
+  [ ] Displacement Confirmed (New Structure: [DESCRIPTION])
+  [ ] MSS/BOS Alignment (Level: [PRICE])
+
+CONFIRMATION SCORE: [XX]%
+
+--------------------------------------------------------------------------------
+SETUP DETAILS:
+  Entry Zone: [PRICE RANGE]
+  Entry Trigger: [CONDITION]
+  Stop-Loss: [PRICE] (Distance: [PIPS])
+  TP1: [PRICE] (R:R: [X:1])
+  TP2: [PRICE] (R:R: [X:1])
+  TP3: [PRICE] (R:R: [X:1]) [IF JUSTIFIED]
+
+--------------------------------------------------------------------------------
+RISK MANAGEMENT:
+  Position Size: [CALCULATED BASED ON RISK %]
+  Risk Per Trade: [X]% of Account
+  Max Drawdown: [X]%
+  Correlation Check: [PASS/FAIL]
+
+--------------------------------------------------------------------------------
+STRUCTURAL INVALIDATION:
+  [ ] Price closes beyond [INVALIDATION LEVEL]
+  [ ] HTF structure shifts against bias
+  [ ] Time-based expiration: [TIME]
+
+--------------------------------------------------------------------------------
+NEXT ACTION:
+  [WAIT FOR CONFIRMATION / ENTER ON TRIGGER / INVALIDATED / NO TRADE]
+
+================================================================================
+```
+
+E2. RISK MANAGEMENT PROTOCOL
+-----------------------------
+
+POSITION SIZING:
+- Risk per trade: 0.5-2% of account (user-defined)
+- Position size = (Account Risk) / (Stop Distance in Currency Units)
+- Maximum position size: 10% of account equity
+
+STOP-LOSS PLACEMENT:
+- Bullish: Below the most recent swing low OR below the swept liquidity
+- Bearish: Above the most recent swing high OR above the swept liquidity
+- Minimum distance: 1.5x average spread
+- Maximum distance: 3x ATR of ETF
+
+TAKE-PROFIT STRUCTURE:
+- TP1: 1x risk (1:1 R:R) - Always taken
+- TP2: 2x risk (2:1 R:R) - Move SL to breakeven
+- TP3: 3x risk (3:1 R:R) - Optional, requires strong confirmation
+
+TRAILING STOP:
+- Activate after TP1 hit
+- Trail by: 1x ATR of ETF
+- OR use manual trailing based on structure
+
+DRAWDOWN MANAGEMENT:
+- Daily max loss: 5% of account
+- Weekly max loss: 10% of account
+- Monthly max loss: 15% of account
+- After max loss reached: STOP TRADING
+
+
+E3. STRUCTURAL INVALIDATION RULES
+----------------------------------
+
+AUTOMATIC INVALIDATION:
+- Price closes beyond the swept liquidity level in opposite direction
+- HTF creates new structure against the trade bias
+- Time-based: If entry trigger not met within defined window
+
+MANUAL INVALIDATION:
+- News event contradicts setup
+- Volume analysis shows distribution/accumulation against bias
+- Correlated pairs show opposite movement
+
+INVALIDATION LEVELS:
+- Bullish trade: Invalid if price closes below entry candle low
+- Bearish trade: Invalid if price closes above entry candle high
+- Time window: Typically 2-4 candles on ETF
+
+
+E4. NEXT ACTION LOGIC
+---------------------
+
+DECISION TREE:
+
+1. Are all Level 1 conditions met?
+   - NO => NO TRADE
+   - YES => Go to 2
+
+2. Is confirmation score >= 66%?
+   - NO => WAIT FOR CONFIRMATION
+   - YES => Go to 3
+
+3. Are all filters passed?
+   - NO => INVALIDATED
+   - YES => Go to 4
+
+4. Is current candle closed?
+   - NO => WAIT FOR CANDLE CLOSE
+   - YES => Go to 5
+
+5. Is entry trigger met?
+   - NO => WAIT FOR TRIGGER
+   - YES => ENTER TRADE
+
+POST-ENTRY ACTIONS:
+- Monitor TP1: If hit, move SL to breakeven
+- Monitor TP2: If hit, trail stop
+- Monitor structural invalidation: If triggered, exit immediately
+
+================================================================================
+PART F: SCREENSHOT INTERPRETATION
+================================================================================
+
+F1. VISUAL PATTERN RECOGNITION
+-------------------------------
+
+IDENTIFIABLE ELEMENTS:
+- Swing Highs: Candles with higher highs than N candles on each side
+- Swing Lows: Candles with lower lows than N candles on each side
+- Liquidity Pools: Areas with visible wicks beyond body
+- FVGs: 3-candle pattern with middle candle gap
+- Order Blocks: 3-5 candle consolidation before move
+- Eccentric Events: Sharp spikes with rapid retracement
+
+VISUAL FILTERS:
+- Minimum swing size: 2x average candle body
+- Minimum wick size: 30% of candle range
+- Minimum FVG size: 1x average candle range
+
+
+F2. SWING IDENTIFICATION PROTOCOL
+----------------------------------
+
+STEP 1: Scan for local extremes
+- Look left: N candles (N = 5 for M15, 10 for H1, 20 for H4)
+- Look right: N candles
+- If highest/lowest in both directions => Swing
+
+STEP 2: Classify swing strength
+- Weak: Swing with small wicks, low volume
+- Strong: Swing with large wicks, high volume
+- Extreme: Swing with > 2x average range
+
+STEP 3: Connect swings to identify structure
+- Bullish: Higher highs AND higher lows
+- Bearish: Lower highs AND lower lows
+- Range: Equal highs AND equal lows
+
+
+F3. LIQUIDITY MAPPING RULES
+----------------------------
+
+EXTERNAL LIQUIDITY:
+- Above: Previous swing highs
+- Below: Previous swing lows
+- Strength: Based on wick size and volume
+
+INTERNAL LIQUIDITY:
+- FVGs within range
+- Order blocks from prior moves
+- Mitigation blocks from FVG fills
+
+LIQUIDITY STRENGTH SCORING:
+- Wick size: 1-10 (10 = largest)
+- Volume: 1-10 (10 = highest)
+- Recency: 1-10 (10 = most recent)
+- Total score: Average of three
+
+
+F4. CANDLE STATE HANDLING
+--------------------------
+
+OPEN CANDLE RULES:
+- Never assume direction
+- Never assume close price
+- Can identify: Current high/low, body size so far
+- Cannot identify: Final rejection, confirmed displacement
+
+CLOSED CANDLE RULES:
+- Can identify: All patterns, all levels
+- Can confirm: Rejection, displacement, structure shifts
+
+MIXED STATE (Multiple Screenshots):
+- Use most recent closed candle for confirmation
+- Note open candles as "forming" in analysis
+- If open candle invalidates setup, flag as "AT RISK"
+
+
+F5. EVIDENCE VS. INTERPRETATION SEPARATION
+-------------------------------------------
+
+EVIDENCE (OBJECTIVE):
+- Price levels (highs, lows, closes)
+- Wick sizes
+- Candle ranges
+- Volume values
+- Time stamps
+- Identifiable patterns (FVG, order blocks)
+
+INTERPRETATION (SUBJECTIVE):
+- Liquidity strength
+- Market bias
+- Probability assessments
+- Trade decisions
+
+RULES:
+1. Always state evidence first
+2. Then provide interpretation
+3. Never present interpretation as fact
+4. Use phrases: "Evidence shows...", "This suggests...", "Interpretation:..."
+
+================================================================================
+PART G: COMPLETE ANALYSIS WORKFLOW
+================================================================================
+
+G1. MULTI-SCREENSHOT PROCESSING
+--------------------------------
+
+WORKFLOW:
+
+1. RECEIVE SCREENSHOT:
+   - Extract instrument and timeframe
+   - Store in memory with timestamp
+   - Flag as "pending analysis"
+
+2. IDENTIFY HIERARCHY:
+   - Determine if this is HTF, ITF, or ETF
+   - If multiple timeframes for same instrument, sort by hierarchy
+   - If new instrument, start new analysis thread
+
+3. ANALYZE INDIVIDUALLY:
+   - Apply appropriate analysis for timeframe level
+   - Extract all observable evidence
+   - Document interpretations
+
+4. MERGE CONTEXT:
+   - Propagate HTF context to ITF/ETF
+   - Check for conflicts
+   - Resolve discrepancies
+
+5. WAIT FOR COMPLETION:
+   - If user indicates "MORE SCREENSHOTS" => Return to step 1
+   - If user says "ANALYZE NOW" => Proceed to final analysis
+
+
+G2. CONTEXT PROPAGATION SYSTEM
+-------------------------------
+
+CONTEXT FLOW:
+HTF -> ITF:
+  - Structure direction
+  - Liquidity levels
+  - ATR values
+  - MSS/BOS status
+
+ITF -> ETF:
+  - Internal liquidity
+  - FVG locations
+  - Order blocks
+  - Confirmation requirements
+
+CONFLICT RESOLUTION:
+- If HTF and ITF disagree on structure => DOWNGRADE CONFIDENCE
+- If ITF and ETF disagree on signal => WAIT FOR CONFIRMATION
+- If HTF structure contradicts ETF signal => INVALIDATE
+
+
+G3. CONFLICT RESOLUTION PROTOCOL
+---------------------------------
+
+CONFLICT TYPES:
+
+1. STRUCTURE CONFLICT:
+   - HTF: Bullish, ITF: Bearish
+   - Resolution: Follow HTF, downgrade to WAIT
+
+2. LIQUIDITY CONFLICT:
+   - HTF liquidity above, ITF liquidity below
+   - Resolution: Prioritize HTF liquidity
+
+3. SIGNAL CONFLICT:
+   - ITF shows bullish EL, ETF shows bearish
+   - Resolution: Require stronger confirmation
+
+4. TIME CONFLICT:
+   - ETF trigger met but ITF not confirmed
+   - Resolution: Wait for ITF confirmation
+
+
+G4. ANALYZE NOW COMMAND EXECUTION
+-----------------------------------
+
+EXECUTION STEPS:
+
+1. VALIDATE INPUT:
+   - Check minimum screenshots received
+   - Verify all required timeframes present
+   - Confirm no missing context
+
+2. COMPILE EVIDENCE:
+   - Merge all observations
+   - Build complete instrument profiles
+   - Create timeframe hierarchy
+
+3. RUN ANALYSIS:
+   - Apply ELM rules to all instruments
+   - Calculate confirmation scores
+   - Check all filters
+
+4. GENERATE OUTPUT:
+   - Create trade cards for valid setups
+   - Flag conflicts and warnings
+   - Provide final verdict
+
+5. DELIVER RESULTS:
+   - Present analysis in standardized format
+   - Include all evidence
+   - State clear next actions
+
+COMMAND VARIATIONS:
+- "ANALYZE NOW": Process all pending screenshots
+- "ANALYZE [INSTRUMENT]": Process only specified instrument
+- "ANALYZE ALL": Process all instruments in memory
+
+================================================================================
+PART H: DECISION RULES
+================================================================================
+
+H1. VERDICT MATRIX
+------------------
+
+DECISION          | CONDITIONS | NEXT ACTION
+------------------|------------|-------------
+BUY               | Bullish EL + All Level 1 + Level 2 (2/3) + All filters passed | Enter long on trigger
+SELL              | Bearish EL + All Level 1 + Level 2 (2/3) + All filters passed | Enter short on trigger
+WAIT FOR CONFIRMATION | Level 1 met but Level 2 incomplete OR filters pending | Monitor for additional evidence
+NO TRADE          | Level 1 not met OR confirmation < 66% | Do not enter, move on
+INVALIDATED       | Any filter failed OR structural contradiction | Cancel setup, do not enter
+
+
+H2. CONFIRMATION THRESHOLDS
+----------------------------
+
+THRESHOLD LEVELS:
+
+LEVEL 1 (33%):
+  - All mandatory conditions met
+  - Minimum viable setup
+  - Requires additional confirmation
+
+LEVEL 2 (66%):
+  - Level 1 + 2 of 3 Level 2 conditions
+  - Tradeable with caution
+  - Standard position size
+
+LEVEL 3 (100%):
+  - All conditions met
+  - High confidence
+  - Can increase position size by 50%
+
+
+H3. MANDATORY EVIDENCE CHECKLIST
+---------------------------------
+
+BEFORE ANY TRADE, VERIFY:
+
+[ ] Instrument correctly identified
+[ ] Timeframes properly hierarchical
+[ ] HTF structure established
+[ ] Liquidity levels mapped
+[ ] Eccentric event identified
+[ ] All 5 EL criteria met
+[ ] Confirmation score calculated
+[ ] All filters checked
+[ ] No structural contradictions
+[ ] Entry trigger defined
+[ ] Stop-loss placed
+[ ] Take-profits calculated
+[ ] R:R >= 1.5 (adjusted for costs)
+[ ] Current candle state known
+[ ] No upcoming high-impact news
+
+IF ANY BOX UNCHECKED => DO NOT TRADE
+
+================================================================================
+PART I: DEMONSTRATION & VALIDATION
+================================================================================
+
+I1. BULLISH EXAMPLE: EURUSD H4
+--------------------------------
+
+SCENARIO:
+- Date: 2024-03-15
+- Timeframes: D1 -> H4 -> H1
+- Instrument: EURUSD (Medium volatility)
+
+D1 ANALYSIS:
+- Structure: Bullish (higher highs/lows)
+- ATR20: 120 pips
+- Liquidity: 1.0800 (previous swing low)
+- MSS: 1.0850 (break of previous high)
+
+H4 ANALYSIS:
+- Price sweeps below 1.0800 to 1.0750 (50 pips = 0.42x ATR20)
+- WAIT: Excursion too small
+- Next candle: Price sweeps to 1.0700 (100 pips = 0.83x ATR20)
+- WAIT: Still below 1.6x threshold
+- Next candle: Price sweeps to 1.0650 (150 pips = 1.25x ATR20)
+- WAIT: Still below threshold
+- Next candle: Price sweeps to 1.0600 (200 pips = 1.67x ATR20) - MEETS CRITERIA
+- Rejection: Returns to 1.0680 (80 pips = 40% return) - FAILS
+- INVALIDATED: Rejection insufficient
+
+H4 ANALYSIS (Continued):
+- Price sweeps to 1.0580 (220 pips = 1.83x ATR20)
+- Rejection: Returns to 1.0690 (110 pips = 50% return) - FAILS
+- INVALIDATED: Still insufficient
+
+H4 ANALYSIS (Valid Example):
+- Price sweeps to 1.0550 (250 pips = 2.08x ATR20) - MEETS
+- Rejection: Returns to 1.0675 (125 pips = 50% return) - FAILS for medium vol
+- But: For EURUSD medium volatility, 61.8% required
+- 125/250 = 50% < 61.8% - FAILS
+- INVALIDATED
+
+CORRECTED EXAMPLE:
+- Price sweeps to 1.0500 (300 pips = 2.5x ATR20) - MEETS
+- Rejection: Returns to 1.0680 (180 pips = 60% return) - CLOSE ENOUGH
+- Displacement: Creates new higher low at 1.0650 - MEETS
+- MSS Alignment: Swept low at D1 MSS level - MEETS
+- Structure: D1 bullish - MEETS
+- CONFIRMATION: 100%
+- ENTRY: Break above rejection candle high (1.0680)
+- SL: 1.0500 (below swept liquidity)
+- TP1: 1.0800 (1:1 R:R)
+- TP2: 1.0920 (2:1 R:R)
+- TP3: 1.1040 (3:1 R:R)
+- VERDICT: BUY
+
+
+I2. BEARISH EXAMPLE: GBPJPY D1
+--------------------------------
+
+SCENARIO:
+- Date: 2024-04-20
+- Timeframes: D1 -> H4 -> H1
+- Instrument: GBPJPY (High volatility)
+
+D1 ANALYSIS:
+- Structure: Bearish (lower highs/lows)
+- ATR20: 250 pips
+- Liquidity: 190.00 (previous swing high)
+- MSS: 188.50 (break of previous low)
+
+D1 EXCURSION:
+- Price sweeps above 190.00 to 192.00 (200 pips = 0.8x ATR20)
+- FAILS: Below 1.4x threshold for high volatility
+- Price extends to 193.00 (300 pips = 1.2x ATR20)
+- FAILS: Still below 1.4x
+- Price extends to 194.00 (400 pips = 1.6x ATR20) - MEETS
+- Rejection: Returns to 191.50 (250 pips = 62.5% return) - MEETS (>50% for high vol)
+- Displacement: Creates new lower high at 191.00 - MEETS
+- MSS Alignment: At D1 level - MEETS
+- Structure: D1 bearish - MEETS
+- CONFIRMATION: 100%
+- ENTRY: Break below rejection candle low (191.50)
+- SL: 194.00 (above swept liquidity)
+- TP1: 189.00 (1:1 R:R)
+- TP2: 186.50 (2:1 R:R)
+- TP3: 184.00 (3:1 R:R)
+- VERDICT: SELL
+
+
+I3. FALSE SIGNAL EXAMPLE: AUDUSD M15
+------------------------------------
+
+SCENARIO:
+- Date: 2024-05-10
+- Timeframes: H4 -> H1 -> M15
+- Instrument: AUDUSD (Medium volatility)
+
+H4 ANALYSIS:
+- Structure: Range-bound (1.6500-1.6700)
+- ATR20: 80 pips
+- Liquidity: 1.6500 (range low), 1.6700 (range high)
+
+M15 ANALYSIS:
+- Price sweeps below 1.6500 to 1.6450 (50 pips = 0.625x ATR20)
+- FAILS: Below 1.6x threshold
+- But: Let's assume it meets threshold for example
+- Price sweeps to 1.6400 (100 pips = 1.25x ATR20) - STILL FAILS
+- Price sweeps to 1.6350 (150 pips = 1.875x ATR20) - MEETS
+- Rejection: Returns to 1.6450 (100 pips = 66.7% return) - MEETS
+- Displacement: Creates new higher low at 1.6425 - MEETS
+- MSS Alignment: Check H4 - H4 is RANGE, not MSS
+- STRUCTURE VALIDATION: H4 is range, not bearish or bullish
+- INVALIDATED: Structure not aligned
+
+FILTER APPLICATION:
+- FILTER 3: Range Filter
+  - Current H4 range: 200 pips
+  - 20-day average: 250 pips
+  - 200 < 50% of 250? No, 200 > 125
+  - PASS
+- FILTER 4: Structure Filter
+  - HTF (H4) is range, ETF (M15) signal is bullish
+  - CONTRADICTION => INVALIDATE
+
+VERDICT: INVALIDATED (Structure Filter)
+
+
+I4. BACKTESTING METHODOLOGY
+-----------------------------
+
+TEST PERIOD:
+- In-sample: 2 years of historical data
+- Out-of-sample: 6 months of unseen data
+- Walk-forward: 3-month optimization, 1-month testing
+
+TEST INSTRUMENTS:
+- Majors: EURUSD, GBPUSD, USDJPY, USDCHF, USDCAD, AUDUSD, NZDUSD
+- Minors: EURGBP, EURJPY, GBPJPY, etc.
+- Crosses: As available
+- Metals: XAUUSD, XAGUSD
+- Synthetics: Volatility75, Volatility100
+
+TEST PARAMETERS:
+- Timeframes: All approved combinations
+- Spread: Historical or average
+- Commission: Typical broker rates
+- Slippage: 0.5-2 pips estimated
+- Initial capital: $10,000
+- Risk per trade: 1% of capital
+
+METRICS TO TRACK:
+- Win rate
+- Average win/loss
+- Profit factor
+- Max drawdown
+- Sharpe ratio
+- Sortino ratio
+- Expectancy
+- R-squared
+- Correlation between instruments
+
+OPTIMIZATION RULES:
+- Optimize on in-sample only
+- Validate on out-of-sample
+- No curve-fitting
+- Parameters must be logically justified
+- Walk-forward validation required
+
+
+I5. PERFORMANCE METRICS FRAMEWORK
+----------------------------------
+
+METRIC               | FORMULA | TARGET | MINIMUM
+--------------------|---------|--------|---------
+Win Rate            | Wins / Total | >60% | >50%
+Profit Factor       | Gross Wins / Gross Losses | >2.0 | >1.5
+Expectancy          | (Avg Win * Win Rate) - (Avg Loss * Loss Rate) | >10 pips | >5 pips
+Max Drawdown        | Peak-to-trough decline | <20% | <30%
+Sharpe Ratio        | (Return - Risk-Free) / Std Dev | >1.5 | >1.0
+Sortino Ratio       | (Return - Risk-Free) / Downside Std Dev | >2.0 | >1.5
+R:R Ratio           | Avg Win / Avg Loss | >1.5 | >1.2
+
+BACKTEST REPORT TEMPLATE:
+```
+Instrument: [SYMBOL]
+Timeframe: [HTF] -> [ITF] -> [ETF]
+Period: [START] to [END]
+Total Trades: [N]
+Win Rate: [X]%
+Profit Factor: [X]
+Expectancy: [X] pips
+Max Drawdown: [X]%
+Sharpe Ratio: [X]
+Sortino Ratio: [X]
+
+Best Trade: [X] pips
+Worst Trade: [X] pips
+Avg Win: [X] pips
+Avg Loss: [X] pips
+Largest Winning Streak: [N] trades
+Largest Losing Streak: [N] trades
+```
+
+DISCLAIMER:
+- Past performance is not indicative of future results
+- Backtests may not account for all real-world factors
+- Always forward-test before live trading
+- Do not risk more than you can afford to lose
+
+================================================================================
+PART J: MASTER PROMPT
+================================================================================
+
+J1. AI DEPLOYMENT TEMPLATE
+--------------------------
+
+SYSTEM PROMPT:
+```
+You are the AMAREE FX ELM AI Analyst, an expert in Eccentric Liquidation
+Model analysis. You follow a strict, rule-based approach to identify high-
+probability trading opportunities across all forex pairs, metals, and
+synthetic indices.
+
+CORE PRINCIPLES:
+1. PRECISION IN EXECUTION: Every trade must meet exact criteria
+2. PATIENCE IN PRICE ACTION: Wait for confirmation, never force trades
+3. EVIDENCE FIRST: Only trade what can be objectively observed
+4. RISK FIRST: Protect capital above all else
+
+ANALYSIS WORKFLOW:
+1. When user uploads a screenshot, extract instrument and timeframe
+2. Store in memory with timestamp
+3. If user says "MORE SCREENSHOTS", wait for additional inputs
+4. If user says "ANALYZE NOW", execute complete analysis
+5. Apply ELM rules strictly, without interpretation bias
+6. Deliver verdict with trade card or explanation
+
+REQUIRED BEHAVIORS:
+- Always separate evidence from interpretation
+- Never assume unreadable price levels
+- Never assume open candles have closed
+- Always check for structural contradictions
+- Always apply all filters
+- Always calculate confirmation scores
+- Never invent account information, prices, or performance
+
+PROHIBITED BEHAVIORS:
+- Do not force trades when confirmation is missing
+- Do not ignore filters
+- Do not assume news events
+- Do not predict future prices
+- Do not provide financial advice
+- Do not claim guaranteed profits
+
+RESPONSE FORMAT:
+When analyzing screenshots, respond with:
+1. Evidence summary (what is objectively observable)
+2. Interpretation (what this suggests)
+3. ELM analysis (does it meet criteria)
+4. Verdict (BUY/SELL/WAIT/NO TRADE/INVALIDATED)
+5. Trade card (if applicable)
+6. Next action
+```
+
+
+J2. QUICK-USE COMMANDS
+----------------------
+
+UPLOAD WORKFLOW:
+1. User: Uploads chart screenshot
+2. AI: "Screenshot received. Instrument: [IDENTIFIED], Timeframe: [IDENTIFIED]. Awaiting more or ANALYZE NOW."
+3. User: Uploads more screenshots OR says "ANALYZE NOW"
+4. AI: Processes all screenshots and delivers analysis
+
+QUICK COMMANDS:
+- "IDENTIFY": Extract instrument and timeframe from last screenshot
+- "LIST ALL": Show all identified instruments and timeframes
+- "CLEAR": Reset memory, start fresh
+- "ANALYZE NOW": Process all pending screenshots
+- "ANALYZE [SYMBOL]": Process only specified instrument
+- "HELP": Show command list
+- "RULES": Show ELM rules summary
+
+RESPONSE TEMPLATES:
+
+For single screenshot (waiting for more):
+"Screenshot [N] received: [INSTRUMENT] [TIMEFRAME]. Total pending: [X]. Upload more or say ANALYZE NOW."
+
+For ANALYZE NOW (valid setup):
+"=== AMAREE FX ELM ANALYSIS ===
+Instrument: [SYMBOL]
+Timeframes: [HTF] -> [ITF] -> [ETF]
+
+EVIDENCE:
+- [LIST ALL OBSERVABLE FACTS]
+
+INTERPRETATION:
+- [ANALYSIS BASED ON EVIDENCE]
+
+ELM CRITERIA:
+- [ ] Excursion >= 1.6x ATR20: [YES/NO] ([DETAILS])
+- [ ] Liquidity Sweep: [YES/NO] ([DETAILS])
+- [ ] Rejection >= 61.8%: [YES/NO] ([DETAILS])
+- [ ] Displacement: [YES/NO] ([DETAILS])
+- [ ] MSS/BOS Alignment: [YES/NO] ([DETAILS])
+
+CONFIRMATION SCORE: [XX]%
+FILTERS: [PASS/FAIL] ([DETAILS])
+
+VERDICT: [BUY/SELL/WAIT/NO TRADE/INVALIDATED]
+
+[TRADE CARD IF APPLICABLE]
+
+NEXT ACTION: [SPECIFIC INSTRUCTION]"
+
+For ANALYZE NOW (no valid setup):
+"=== AMAREE FX ELM ANALYSIS ===
+Instrument: [SYMBOL]
+Timeframes: [HTF] -> [ITF] -> [ETF]
+
+EVIDENCE:
+- [LIST FACTS]
+
+ANALYSIS:
+- [EXPLANATION OF WHY NOT VALID]
+
+VERDICT: NO TRADE / WAIT FOR CONFIRMATION / INVALIDATED
+
+REASON: [SPECIFIC MISSING CRITERIA OR FAILED FILTERS]
+
+NEXT ACTION: [WHAT TO WAIT FOR]"
+
+
+J3. TECHNICAL REFERENCE
+-----------------------
+
+QUICK LOOKUP:
+
+Eccentric Liquidation Definition:
+  = (Excursion > VolScaled ATR) AND (Liquidity Sweep) AND (Rejection > VolScaled %)
+    AND (Displacement) AND (MSS/BOS Alignment)
+
+Volatility Scaling:
+  LOW: ATRx1.8, Rejection 70%
+  MEDIUM: ATRx1.6, Rejection 61.8%
+  HIGH: ATRx1.4, Rejection 50%
+  XAUUSD: ATRx2.0, Rejection 61.8%
+  SYNTHETICS: ATRx1.2, Rejection 50%
+
+Confirmation Levels:
+  Level 1 (33%): All mandatory
+  Level 2 (66%): Level 1 + 2/3 additional
+  Level 3 (100%): All conditions
+
+Filters (Any fail = INVALIDATE):
+  1. Low volume on rejection
+  2. Within 1 hour of high-impact news
+  3. Current range < 50% of 20-day average
+  4. HTF structure contradiction
+  5. Overbought/oversold without displacement
+  6. Open candle without trigger
+
+Trade Card Required Fields:
+  Instrument, Timeframes, Bias, Entry Zone, Entry Trigger, SL, TP1, TP2, TP3,
+  Risk %, R:R, Structural Invalidation, Next Action
+
+Verdict Matrix:
+  BUY: Bullish EL + Level 2+ + All filters passed
+  SELL: Bearish EL + Level 2+ + All filters passed
+  WAIT: Level 1 only OR filters pending
+  NO TRADE: Level 1 not met
+  INVALIDATED: Any filter failed OR structural contradiction
+
+
+================================================================================
+DOCUMENT END
+================================================================================
+
+AMAREE FX ACADEMY
+ECCENTRIC LIQUIDATION MODEL (ELM)
+Multi-Timeframe AI Analysis & Execution Framework
+
+Core Principle: PRECISION IN EXECUTION. PATIENCE IN PRICE ACTION.
+
+This document is a proprietary trading framework. Distribution without
+permission is strictly prohibited. This is for educational purposes only.
+Trading involves substantial risk. Always test thoroughly before using real
+capital.
+
+================================================================================
